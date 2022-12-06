@@ -1,6 +1,8 @@
 import {setupScene, setupCamera, setupRenderer} from './setups/scene.js';
 import setupOrbitControls from './setups/orbitControls.js';
 
+import updateAspectRatio from './eventfunctions/updateAspectRatio.js';
+
 /**
  * Holds variables used throughout the program.
  * @type {Object}
@@ -27,3 +29,4 @@ function mainLoop() {
 
 //Browser events
 window.onload = main;
+window.onresize = updateAspectRatio;
