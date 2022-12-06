@@ -10,6 +10,7 @@ export function setupScene() {
   vars.scene.add(new THREE.AxesHelper(30)); //Adds xyz-axes for visualisation to the scene
 }
 
+export const lookAt = new THREE.Vector3(0, 0, 0);
 const startingPos = new THREE.Vector3(0, 0, 20);
 const fov = 45;
 const nearPlane = 0.1;

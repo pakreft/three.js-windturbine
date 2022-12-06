@@ -1,4 +1,5 @@
 import {setupScene, setupCamera, setupRenderer} from './setups/scene.js';
+import setupOrbitControls from './setups/orbitControls.js';
 
 /**
  * Holds variables used throughout the program.
@@ -14,6 +15,7 @@ function main() {
   setupScene();
   setupCamera();
   setupRenderer();
+  setupOrbitControls();
 
   mainLoop();
 }
