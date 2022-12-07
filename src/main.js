@@ -1,6 +1,7 @@
 import {setupScene, setupCamera, setupRenderer} from './setups/scene.js';
 import setupOrbitControls from './setups/orbitControls.js';
 import setupGUI from './setups/gui.js';
+import addObjects from './setups/objects.js';
 
 import updateAspectRatio from './eventfunctions/updateAspectRatio.js';
 
@@ -10,6 +11,7 @@ import updateAspectRatio from './eventfunctions/updateAspectRatio.js';
  * @property {THREE.Scene} scene
  * @property {THREE.PerspectiveCamera} camera
  * @property {THREE.WebGLRenderer} renderer
+ * @property {WindTurbine} windturbine //TODO: define jsdoc type
  */
 export let vars = {};
 
@@ -20,6 +22,8 @@ function main() {
   setupRenderer();
   setupOrbitControls();
   setupGUI();
+
+  addObjects();
 
   mainLoop();
 }
