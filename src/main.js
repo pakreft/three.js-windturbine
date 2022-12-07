@@ -1,5 +1,6 @@
 import {setupScene, setupCamera, setupRenderer} from './setups/scene.js';
 import setupOrbitControls from './setups/orbitControls.js';
+import setupGUI from './setups/gui.js';
 
 import updateAspectRatio from './eventfunctions/updateAspectRatio.js';
 
@@ -18,6 +19,7 @@ function main() {
   setupCamera();
   setupRenderer();
   setupOrbitControls();
+  setupGUI();
 
   mainLoop();
 }
@@ -27,6 +29,6 @@ function mainLoop() {
   requestAnimationFrame(mainLoop);
 }
 
-//Browser events
+// Browser events
 window.onload = main;
 window.onresize = updateAspectRatio;
